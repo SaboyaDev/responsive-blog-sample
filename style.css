@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200;300;400&display=swap');
+
 * {
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
 }
 
 html,
@@ -7,10 +14,9 @@ body {
   background-image: url('./images/bg-image.jpg');
   background-position: center;
   background-size: cover;
-  /* border: 2px solid red; */
   width: 100%;
-  /* height: 100%; */
-  /* font-family: 'Merriweather'; */
+  height: 100%;
+  font-family: 'Gothic A1', sans-serif;
 }
 
 h1,
@@ -19,20 +25,32 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Montserrat';
+  font-family: 'Archivo Black', sans-serif;
+}
+
+.article-summary > p {
+  font-size: 0.9rem;
 }
 
 .container {
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  /* border: 2px solid blue; */
-  max-width: 960px;
-  margin: 60px auto;
-  padding: 2rem;
+  max-width: 1228px;
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 6rem;
 }
 
 header {
-  /* border: 2px solid black; */
+  /* border-bottom: 2px solid black; */
+  padding: 0 2rem;
+}
+#highlight-post {
+  padding: 3rem 0;
+}
+
+#logo {
+  margin-top: 0;
 }
 
 #highlight-post {
@@ -42,7 +60,20 @@ header {
 }
 
 #highlight-post > img {
-  width: 55%;
+  width: 65%;
+}
+
+#highlight-post .article-summary {
+  margin-top: 2rem;
+  padding-right: 2rem;
+}
+
+#highlight-post .article-summary > p {
+  font-size: 1.5rem;
+}
+
+#highlight-post .article-credit {
+  justify-content: flex-start;
 }
 
 .article-credit {
@@ -56,9 +87,40 @@ header {
   border-radius: 50%;
 }
 
+button,
+#button {
+  padding: 0.5rem 0;
+  border-radius: 5px;
+  border-color: #7971ea;
+  background-color: #7971ea;
+  color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: pointer;
+}
+
+.article-credit button {
+  width: 7rem;
+}
+
+.article-credit .posts-btn {
+  width: 5rem;
+  font-size: 0.8rem;
+}
+
+.author-date {
+  text-align: left;
+}
+
+.author-date p {
+  margin: 0.2rem 1rem;
+  font-size: 0.8rem;
+}
+
 #posts {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 10rem;
+  padding: 0 2rem;
 }
 
 .post {
@@ -69,104 +131,45 @@ header {
 .post > img {
   width: 100%;
 }
-/* * {
+
+#bridge {
+  width: 100%;
+  height: 50vh;
+  background-image: url('./images/bridge-img.jpg');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+#bridge-content {
+  margin-left: 15rem;
+}
+#bridge-content > h3 {
+  font-family: 'Gothic A1', sans-serif;
+}
+#newsletter-form {
+  display: flex;
+}
+#newsletter-form #email {
+  flex-grow: 2;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 0.5px solid grey;
+  margin-right: 0.5rem;
+}
+#newsletter-form #button {
+  width: 8rem;
+}
+
+footer {
+  background-color: #121317;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p {
+  color: rgb(238, 234, 227);
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
-
-html,
-body {
-  border: 2px solid red;
-  width: 100%;
-  height: 100%;
-  font-family: 'Merriweather';
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Montserrat';
-}
-
-h1 {
-  font-weight: 800;
-  margin-bottom: 10px;
-}
-
-.container {
-  border: 3px solid brown;
-  width: 900px;
-  margin: 120px auto;
-}
-
-.blog-title {
-  width: 100%;
-  padding-bottom: 40px;
-  border-bottom: 1px solid lightgrey;
-}
-
-.top-post {
-  width: 100%;
-  padding-top: 25px;
-  display: flex;
-}
-
-.top-post > img {
-  width: 65%;
-}
-
-.post-details {
-  width: 100%;
-}
-
-.post-details > h3 {
-  font-weight: 600;
-  margin: 10px 0;
-  font-size: 1.3rem;
-}
-
-.post-details > h6 {
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-.top-post-details {
-  width: 35%;
-  margin-top: 30px;
-  margin-left: 45px;
-}
-
-.top-post-details > h3 {
-  font-size: 1.6rem;
-}
-
-.other-posts {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 35px;
-}
-
-.other-post {
-  width: 30%;
-  height: 100%;
-}
-
-.other-post > img {
-  width: 100%;
-}
-
-.bio {
-  margin-top: 20px;
-  display: flex;
-}
-
-.bio > img {
-  width: 40px;
-  border-radius: 100%;
-  margin-right: 10px;
-} */
